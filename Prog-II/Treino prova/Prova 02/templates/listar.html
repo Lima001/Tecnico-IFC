@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Listar Pessoa</title>
+        <meta charset="uft-8">
+    </head>
+    
+    <body>
+        <h1>Lista de Jogos</h1>
+        <br>
+        <hr>
+        
+        {%for jogo in lista:%}
+            <strong>ID:</strong> &nbsp; {{jogo.id}} <br>
+            <strong>Nome:</strong> &nbsp; {{jogo.nome}} <br>
+            <strong>Ano de Lançamento:</strong> &nbsp; {{jogo.ano_lancamento}} <br>
+            <strong>Quantidade em Estoque</strong> &nbsp; {{jogo.qtd_estoque}} <br>
+            
+            {%if session["user"]:%}
+                <form action="/form_alterar" method="post">
+                    <input type="hidden" name="id" value={{jogo.id}}>
+                    <input type="submit" value="Alterar">
+                </form>
+                <a href=/excluir_jogo?id={{jogo.id}}>Excluir</a>
+            {%endif%}
+            <hr>
+            <br>
+        {%endfor%}
+        {%if session["user"]:%}
+            <a href="/form_inserir_jogo">Inserir</a>
+        {%endif%}
+        <br>
+        <a href="/">Voltar ao Menu</a>
+
+
+    </body>
+</html>

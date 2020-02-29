@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>inicio</title>
+        <meta charset="uft-8">
+    </head>
+
+    <body>
+        <h1>Bem Vindo -- Cadastro Eletrônico de Jogos</h1>
+        <br>
+        {%if session['user']:%}
+            <a href="/listar_jogos">Listagem de jogos</a><br>
+            <a href="/logout">Logout</a>
+        {%else:%}
+            <a href="/form_login">Login</a><br>
+            <a href="/listar_jogos">Listagem de jogos</a><br>
+        {%endif%}
+    </body>
+</html>

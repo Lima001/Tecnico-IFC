@@ -1,0 +1,32 @@
+{
+  "lista_treino_astronauta": [
+    {
+      "astronauta": {
+        "id": 1,
+        "idade": 32,
+        "nome": "Amarildo"
+      },
+      "id": 1,
+      "status": true,
+      "treino": {
+        "carga_horaria": 30.0,
+        "id": 1,
+        "nome": "Pouso de Emergencia"
+      }
+    },
+    {
+      "astronauta": {
+        "id": 2,
+        "idade": 26,
+        "nome": "Ana"
+      },
+      "id": 2,
+      "status": false,
+      "treino": {
+        "carga_horaria": 36.0,
+        "id": 2,
+        "nome": "Primeiro Socorros"
+      }
+    }
+  ]
+}

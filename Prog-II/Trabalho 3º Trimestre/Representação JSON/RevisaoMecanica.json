@@ -1,0 +1,38 @@
+{
+  "lista_revisao_mecanica": [
+    {
+      "data_conclusao": "Sun, 01 Dec 2019 13:33:21 GMT",
+      "descricao": "Ajuste Paraquedas Espacial",
+      "gastos": 45000.0,
+      "id": 1,
+      "nave_revisada": {
+        "central": {
+          "id": 1,
+          "nome": "AstroBras",
+          "qtd_empregados": 650
+        },
+        "codigo": "DB-128-4",
+        "id": 1,
+        "porcentagem_combustivel": 100.0,
+        "status_funcionamento": true
+      }
+    },
+    {
+      "data_conclusao": "Sun, 01 Dec 2019 13:33:21 GMT",
+      "descricao": "Ajuste Radar Cosmico",
+      "gastos": 33500.0,
+      "id": 2,
+      "nave_revisada": {
+        "central": {
+          "id": 1,
+          "nome": "AstroBras",
+          "qtd_empregados": 650
+        },
+        "codigo": "DB-128-4",
+        "id": 1,
+        "porcentagem_combustivel": 100.0,
+        "status_funcionamento": true
+      }
+    }
+  ]
+}

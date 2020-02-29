@@ -1,0 +1,33 @@
+{
+  "lista_tarefa": [
+    {
+      "descricao": "Explorar Arredores da Base",
+      "id": 1,
+      "tempo_delimitado": 4.0,
+      "astronautas_responsaveis": [
+        {
+          "id": 1,
+          "idade": 32,
+          "nome": "Amarildo"
+        },
+        {
+          "id": 2,
+          "idade": 26,
+          "nome": "Ana"
+        }
+      ]
+    },
+    {
+      "descricao": "Comunicar Central Terrestre",
+      "id": 2,
+      "tempo_delimitado": 0.3,
+      "astronautas_responsaveis": [
+        {
+          "id": 2,
+          "idade": 26,
+          "nome": "Ana"
+        }
+      ]
+    }
+  ]
+}

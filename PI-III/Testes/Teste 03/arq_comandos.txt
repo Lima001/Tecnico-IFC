@@ -1,0 +1,10 @@
+../BancoImagem/imagem10.png
+command
+takeoff
+- go 20 0 0 10
+go 20 0 0 10
+go 20 0 0 10
+go 20 0 0 10
+go 20 0 0 10
+go 20 0 0 10
+land

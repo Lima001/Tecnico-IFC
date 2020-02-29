@@ -1,0 +1,10 @@
+{
+  "lista_planeta": [
+    {
+      "atmosfera_respiravel": false,
+      "gravidade": 24.79,
+      "id": 1,
+      "nome": "Jupiter"
+    }
+  ]
+}

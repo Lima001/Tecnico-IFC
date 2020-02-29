@@ -1,0 +1,15 @@
+{
+    "lista_nave": [
+      {
+        "central": {
+          "id": 1, 
+          "nome": "AstroBras", 
+          "qtd_empregados": 650
+        }, 
+        "codigo": "DB-128-4", 
+        "id": 1, 
+        "porcentagem_combustivel": 100.0, 
+        "status_funcionamento": true
+      }
+    ]
+  }

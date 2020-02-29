@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Listar Pessoa</title>
+        <meta charset="uft-8">
+    </head>
+    
+    <body>
+
+        <h1>Listar Pessoas</h1>
+        <br>
+        <br>
+        <hr>
+        {%for p in usuarios:%}
+            <strong>{{p.cpf}}</strong> &nbsp; {{p.nome}} &nbsp; {{p.endereco}} &nbsp; {{p.telefone}} &nbsp; <a href=/excluir_pessoa?cpf={{p.cpf}}><img src="static/cancelar.png" style="width: 15px; height: 15px;"></a> &nbsp; <a href=/form_alterar_pessoa?cpf={{p.cpf}}><img src="static/alterar.png" style="width: 15px; height: 15px;"></a>
+            <br>
+            <br>
+        {%endfor%}
+        <hr>
+        <br>
+        <a href="/inserir_pessoa">Inserir Pessoa</a>
+        <br>
+        <a href="/">Voltar ao inicio</a>
+        
+    </body>
+</html>

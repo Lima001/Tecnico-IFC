@@ -1,0 +1,14 @@
+{
+  "lista_astronautas": [
+    {
+      "id": 1,
+      "idade": 32,
+      "nome": "Amarildo"
+    },
+    {
+      "id": 2,
+      "idade": 26,
+      "nome": "Ana"
+    }
+  ]
+}

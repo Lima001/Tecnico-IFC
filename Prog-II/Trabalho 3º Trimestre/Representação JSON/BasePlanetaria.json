@@ -1,0 +1,15 @@
+{
+  "lista_base_planetaria": [
+    {
+      "codinome": "J-3545-1",
+      "id": 1,
+      "localizacao": {
+        "atmosfera_respiravel": false,
+        "gravidade": 24.79,
+        "id": 1,
+        "nome": "Jupiter"
+      },
+      "status_comunicacao_terra": false
+    }
+  ]
+}

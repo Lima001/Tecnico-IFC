@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Inicio</title>
+    </head>
+    <body>
+        <h1>Lista de Receitas</h1>
+        <br>
+        <a href="/">Voltar ao Inicio</a>
+
+        {%for x in range(3):%}
+            <br>
+        {%endfor%}
+        
+        {%for receita in lista_receita:%}
+            {{receita.nome}} <br>
+            <a href="/listar_ingredientes_receita?id_receita={{receita.id}}">Ver Ingredientes</a> 
+        {%endfor%}
+    </body>
+</html>
