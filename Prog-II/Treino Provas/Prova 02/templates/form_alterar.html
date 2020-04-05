@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>inicio</title>
+        <meta charset="uft-8">
+    </head>
+
+    <body>
+        <h1>Inserir pessoa</h1>
+        <br>
+        <br>
+        <form action="/alterar" method="post">
+            ID: <strong>{{jogo.id}}</strong>
+            <input type="hidden" name="id" value="{{jogo.id}}"><br>
+            Nome: <input type="text" name="nome" value="{{jogo.nome}}"><br>
+            Ano Lançamento: <input type="text" name="ano_lancamento" value="{{jogo.ano_lancamento}}"><br>
+            Quantidade Estoque: <input type="text" name="qtd_estoque" value="{{jogo.qtd_estoque}}"><br>
+            <input type="submit" value="Alterar">
+            <input type="reset" value="Redefinir">
+        </form>
+        <br>
+        <a href="/listar_jogos">Cancelar</a>
+    </body>
+</html>

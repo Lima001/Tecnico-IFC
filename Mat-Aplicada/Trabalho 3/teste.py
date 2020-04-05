@@ -1,103 +1,112 @@
-
-import pygame
-
-matrizes=[]
-
-def listar_lista(lista):
-    nova_lista=[]
-    for i in lista:
-        nova_lista.append(list(i))
-    return nova_lista
+import matplotlib.pyplot as plt
 
 
-def desenhar_linha(pontos,max_x):
-    lista_pontos=listar_lista(pontos)
-    for i in range(4):
-        matrizes.append(list(listar_lista(lista_pontos)))
-        for i in lista_pontos:
-            i[0]+=max_x
-    return matrizes
-
-def desenhar_varias_linhas(pontos):
-    max_x=descobrir_max(pontos,0)
-    max_y=descobrir_max(pontos,1)
-    lista_pontos=listar_lista(pontos)
-    for i in range(4):
-        desenhar_linha(lista_pontos,max_x)
-        for i in lista_pontos:
-            i[1]+=max_y
-
-
-def descobrir_max(pontos,x_y):
-    max=0
-    for i in pontos:
-        if i[x_y]>max:
-            max=i[x_y]
-    return max
-
-def desenho_padrão():
-    desenhar_varias_linhas(pontos)
-    for i in matrizes:
-        pygame.draw.polygon(tela,(0,255,0), i)
-
-def printar_4x4():
-    matriz_4x4=[]
-    for i in matrizes[15]:
-        matriz_4x4.append([(i[0]/tamanho_maior),(i[1]/tamanho_maior)])
-    return matriz_4x4
+"""
+FALTA FAZER
+-TRANSLAÇÃO (DESCOBRIR MEIO!)
+-ROTAÇÃO - NÃO APARECE NO GRÁFICO
+"""
 
 
 
-def desenho_2():
-    desenhar_varias_linhas(pontos)
-    valor_somado_x=descobrir_max(matrizes[0],0)
-    valor_somado_y=descobrir_max(matrizes[0],1)
-    for i in range(len(matrizes)):
-        for y in range(len(matrizes[i])):
-            if i%2!=0:
-                matrizes[i][y][0]*=-1
-                if i not in [3,7,11,15]:
-                     matrizes[i][y][0]+=3*valor_somado_x
-                else:
-                    matrizes[i][y][0]+=7*valor_somado_x
-            
-            if i in [4,5,6,7]:
-                matrizes[i][y][1]*=-1
-                matrizes[i][y][1]+=3*valor_somado_y
-            if i in [12,13,14,15]:
-                matrizes[i][y][1]*=-1
-                matrizes[i][y][1]+=7*valor_somado_y            
-               
-                
-    for i in matrizes:
-        pygame.draw.polygon(tela,(0,255,0), i)
+#faz o poligono normal
+x = [0,0,3,2,1,1,4,3,4,7,0]
+y = [0,7,4,3,4,1,1,2,3,0,0]
+
+#faz o processo de escala o poligono aumentando duas vezes seu tamanho
+x_escala = []
+y_escala = []
+
+#faz com que possamos fazer a reflexão para o lado, combinando as coordenadas que já possuimos do y normal e do y translatado
+#com as coordenadas de x, formando pares no estilo x multiplicado por menos 1 e x normal e y translatado e x da multiplicado por menos para a fazer a reflexão
+x_reflexao_lado = []
+x_reflexao_lado_escala = []
+
+#faz com que inverta pra baixo no lado esquerdo combinando as coordenadas como foi feito na reflexão do lado
+y_reflexão_baixo = []
+y_reflexão_baixo_escala = []
+
+
+
+#faz rotação de 180 graus
+x_rotação_180_origin = []
+y_rotação_180_origin = [] 
+
+
+#rotação_180 graus
+for e in x:
+    s = e*-1
+    x_rotação_180_origin.append(s)
+
+for d  in y:
+    ff = d *-1
+    y_rotação_180_origin.append(ff)
+    
+
+#translata
+for j in x:
+    a = j / 2
+    x_escala.append(a)
+
+for k in y:
+    b = k / 2
+    y_escala.append(b)
+
+#reflete por ladinho
+for r in x:
+    ç = r * -1
+    x_reflexao_lado.append(ç)
+
+for o in x_escala:
+    v = o * -1
+    x_reflexao_lado_escala.append(v)
+
+#reflete pra baixo no lado esquerdo
+#OBS: PARA O LADO DIREITO BASTA RECOMBINAR AS COORDENADAS
+for q in y:
+    g = q *-1
+    y_reflexão_baixo.append(g)
+
+for t in y_escala:
+    w = t*-1
+    y_reflexão_baixo_escala.append(w)
 
 
 
 
-pygame.init()
-tela = pygame.display.set_mode((800, 600), 0, 32)
-tela.fill((0,0,0))
- 
-pontos=[[0,7],[7,7],[7,0],[4,3],[5,4],[6,3],[6,6],[3,6],[4,5],[3,4]]
 
-tamanho_x=200/descobrir_max(pontos,0)
-tamanho_y=150/descobrir_max(pontos,1)
 
-if tamanho_x<tamanho_y:
-    tamanho_maior=tamanho_x
-else:
-    tamanho_maior=tamanho_y
+#normal
+plt.fill(x,y,'b')
 
-for i in pontos:
-    i[0]=i[0]*tamanho_maior
-    i[1]=i[1]*tamanho_maior
+"""
+#escala
+plt.fill(x_escala, y_escala, "r")
+"""
 
-desenho_2()
-print(printar_4x4())
+#refletir para o lado esquerdo normal
+plt.fill(x_reflexao_lado, y, "g")
 
-while True:
-    pygame.display.update()
-    for event in pygame.event.get():
-        if event.type==pygame.QUIT:
-            exit()
+"""
+plt.fill(x_reflexao_lado_escala, y_escala, "b")
+"""
+
+#refletir para baixo no lado esquerdo
+"""
+plt.fill(x_reflexao_lado_escala,y_reflexão_baixo_escala, "r")
+"""
+plt.fill(x_reflexao_lado, y_reflexão_baixo, "g")
+
+#refletir pra baixo no lado direito
+plt.fill(x, y_reflexão_baixo,"b")
+"""
+plt.fill(x_escala, y_reflexão_baixo_escala, "r")
+"""
+
+"""
+#rotaciona 180 graus
+plt.fill(x_rotação_180_origin, y_rotação_180_origin , "r")
+"""
+plt.grid(True)
+plt.show() 
+
