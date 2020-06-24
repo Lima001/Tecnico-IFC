@@ -25,7 +25,7 @@ Abaixo você pode conferir brevemente sobre o que cada um se trata, bem como ver
 - __Sobre:__ Disciplina para aplicação de Recursos avançados de uma linguagem de programação, Implementação de software com uma linguagem de programação, e 
              Integração com Banco de Dados. Ao longo da disciplina foram desenvolvidos sistemas Webs (Backend e Frontend), 
              realizada integração do sistema com Banco de Dados, e exploração de diferentes tecnologias nesse contexto
-- __Principais Tecnologias:__ Python e Bibliotecas(flask e peewee), HTML, JavaScript e Jquery
+- __Principais Tecnologias:__ Python e Bibliotecas(flask e peewee), HTML, JSON, JavaScript e Jquery
 - __Período:__ 3º Ano
 
 ### PI-III
