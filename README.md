@@ -19,6 +19,8 @@ Abaixo você pode conferir brevemente sobre o que cada um se trata, bem como ver
             que você pode encontrar como o __GDD__ do jogo. 
 - __Principais Tecnologias:__ Python e Pygame
 - __Período:__ 2º Ano
+- __Grupo:__ [Guilherme Eduardo Kuglin](https://github.com/Kuglin), [Thiago Vinicius de Oliveira Hornburg](https://github.com/Tvohornburg),
+            [Timóteo Rafael Janzen](https://github.com/TimoteoRJanzen)
 
 ### Prog-II
 - __Nome:__ Programação II
@@ -34,6 +36,7 @@ Abaixo você pode conferir brevemente sobre o que cada um se trata, bem como ver
             Nesse ano o projeto criado tinha como tema o uso da análise imagens simples para automatizar o voo de um pequeno drone.
 - __Principais Tecnologias:__ Python e Pillow
 - __Período:__ 3º Ano
+- __Dupla:__: [Thiago Vinicius de Oliveira Hornburg](https://github.com/Tvohornburg)
 
 ## Perfil dos Professores no GitHub
 - [Hylson](https://github.com/hvescovi): Programação II, Projeto Integrador III
