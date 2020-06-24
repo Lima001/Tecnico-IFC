@@ -36,7 +36,7 @@ Abaixo você pode conferir brevemente sobre o que cada um se trata, bem como ver
 - __Período:__ 3º Ano
 
 ## Perfil dos Professores no GitHub
-- [Hylson](https://github.com/hvescovi): Programação II, Projeto Integrado II
+- [Hylson](https://github.com/hvescovi): Programação II, Projeto Integrador III
 
 
 
